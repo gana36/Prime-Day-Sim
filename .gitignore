@@ -2,23 +2,54 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyo
+*.pyd
 
 # Virtual Environment
 prime/
 venv/
 env/
-.env
+.venv/
 
-# Data
+# Environment Variables (SECRETS!)
+.env
+.env.local
+.env.*.local
+
+# Data files (too large for git)
 *.csv
 *.db
 *.sqlite
 
+# Terraform (SECRETS!)
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/*.tfvars
+terraform/.terraform.lock.hcl
+
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS
 .DS_Store
 Thumbs.db
-markdowns/*
+
+# Logs
+*.log
+logs/
+
+# Test/Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Build
+dist/
+build/
+*.egg-info/
+markdowns/
+
