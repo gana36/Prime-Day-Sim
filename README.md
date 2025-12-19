@@ -216,19 +216,6 @@ amazon-prime-day-simulator/
 
 ---
 
-## Documentation
-
-Detailed scenario explanations are available in the `markdowns/` folder:
-
-| Document | Description |
-|----------|-------------|
-| [scenario3.md](markdowns/scenario3.md) | Normal purchase flow (API to SQS to Worker to DB) |
-| [scenario4.md](markdowns/scenario4.md) | Race condition handling with optimistic locking |
-| [scenario6.md](markdowns/scenario6.md) | How the system handles 10,000 concurrent users |
-| [crud_explained.md](markdowns/crud_explained.md) | Database operations with visual diagrams |
-
----
-
 ## AWS Deployment (Terraform)
 
 The `terraform/` folder contains Infrastructure as Code for AWS:
@@ -243,16 +230,6 @@ cd terraform
 terraform init
 terraform apply
 ```
-
----
-
-## Resume Bullet Points
-
-> Architected a high-availability inventory microservice using Python (FastAPI) and Redis, utilizing Optimistic Locking strategies to prevent inventory overselling during simulated concurrency of 10,000 TPS.
-
-> Implemented an asynchronous order processing pipeline using Amazon SQS, decoupling the checkout service from the inventory database to ensure zero-downtime during traffic spikes.
-
-> Deployed infrastructure via Terraform on AWS, provisioning RDS, ElastiCache, and SQS to handle dynamic load changes.
 
 ---
 
